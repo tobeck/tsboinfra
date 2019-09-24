@@ -1,0 +1,3 @@
+gcloud/tf_env_vars
+.terraform/
+terraform.tfstate*
