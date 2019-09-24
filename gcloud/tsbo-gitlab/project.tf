@@ -6,7 +6,7 @@ provider "google" {
 }
 
 data "google_billing_account" "billing_account" {
-  billing_account = "012242-C85D66-4DCB94"
+  billing_account = "${var.billing_account}"
   open            = true
 }
 

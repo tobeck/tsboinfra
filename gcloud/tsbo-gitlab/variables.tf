@@ -5,3 +5,5 @@ variable "project_name" {
 variable "zone" {
   default = "europe-north1-a"
 }
+
+variable "billing_account" {}
