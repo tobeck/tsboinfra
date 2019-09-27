@@ -1,0 +1,2 @@
+variable "billing_account" {
+}
