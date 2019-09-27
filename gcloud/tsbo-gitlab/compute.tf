@@ -5,7 +5,7 @@ resource "google_compute_instance" "instance" {
   project      = "${google_project.project.project_id}"
   zone         = var.zone
   name         = "${var.project_name}-instance"
-  machine_type = "f1-micro"
+  machine_type = "n1-standard-1"
   boot_disk {
     initialize_params {
       image = "cos-cloud/cos-stable"
