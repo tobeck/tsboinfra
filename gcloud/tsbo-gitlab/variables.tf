@@ -6,4 +6,5 @@ variable "zone" {
   default = "europe-north1-a"
 }
 
-variable "billing_account" {}
+variable "billing_account" {
+}
