@@ -1,5 +1,6 @@
 provider "google" {
-  region = "${var.region}"
+  credentials = "${file("~/.google/tsbo-admin-e5b99d056761.json")}"
+  region      = "${var.region}"
 }
 
 data "google_billing_account" "billing_account" {
