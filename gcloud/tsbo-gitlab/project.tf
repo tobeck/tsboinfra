@@ -6,7 +6,7 @@ provider "google" {
 }
 
 data "google_billing_account" "billing_account" {
-  billing_account = "${var.billing_account}"
+  billing_account = var.billing_account
   open            = true
 }
 
@@ -15,8 +15,8 @@ data "google_organization" "organization" {
 }
 
 resource "google_project" "project" {
-  name            = "tsbo-gitlab"
-  project_id      = "tsbo-gitlab"
+  name            = var.project_name
+  project_id      = var.project_name
   org_id          = "${data.google_organization.organization.id}"
   billing_account = "${data.google_billing_account.billing_account.id}"
 }
