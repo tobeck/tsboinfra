@@ -19,3 +19,29 @@ resource "google_project" "project" {
 
   billing_account = "${data.google_billing_account.billing_account.id}"
 }
+
+resource "google_project_services" "services" {
+  project = "${google_project.project.project_id}"
+  services = [
+    "iam.googleapis.com",
+    "cloudresourcemanager.googleapis.com",
+    "bigquery-json.googleapis.com",
+    "bigquery-json.googleapis.com",
+    "bigquerystorage.googleapis.com",
+    "cloudapis.googleapis.com",
+    "cloudbilling.googleapis.com",
+    "clouddebugger.googleapis.com",
+    "cloudtrace.googleapis.com",
+    "compute.googleapis.com",
+    "datastore.googleapis.com",
+    "logging.googleapis.com",
+    "monitoring.googleapis.com",
+    "oslogin.googleapis.com",
+    "servicemanagement.googleapis.com",
+    "serviceusage.googleapis.com",
+    "sql-component.googleapis.com",
+    "storage-api.googleapis.com",
+    "storage-component.googleapis.com",
+    "dns.googleapis.com"
+  ]
+}
