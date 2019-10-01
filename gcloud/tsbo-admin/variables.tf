@@ -4,3 +4,7 @@ variable "region" {
 
 variable "billing_account" {
 }
+
+variable "project_name" {
+  default = "tsbo-admin"
+}
