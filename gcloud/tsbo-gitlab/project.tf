@@ -25,6 +25,7 @@ resource "google_project_services" "project_services" {
   project = "${google_project.project.project_id}"
   services = [
     "compute.googleapis.com",
+    "dns.googleapis.com",
     "oslogin.googleapis.com"
   ]
 }
