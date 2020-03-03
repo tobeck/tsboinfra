@@ -23,7 +23,6 @@ resource "google_project" "project" {
 resource "google_project_services" "services" {
   project = "${google_project.project.project_id}"
   services = [
-    "iam.googleapis.com",
     "cloudresourcemanager.googleapis.com",
     "bigquery-json.googleapis.com",
     "bigquery-json.googleapis.com",
