@@ -45,3 +45,14 @@ resource "google_compute_disk" "gitlab-data" {
   type        = "pd-standard"
   size        = 10
 }
+
+resource "google_dns_record_set" "gitlab" {
+  name    = "gitlab.tsbo.me."
+  project = "tsbo-admin"
+  type    = "A"
+  ttl     = 300
+
+  managed_zone = "tsbo-zone"
+
+  rrdatas = ["${google_compute_instance.instance.network_interface.0.access_config.0.nat_ip}"]
+}
